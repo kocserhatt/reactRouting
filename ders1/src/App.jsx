@@ -1,13 +1,19 @@
 import useAuth from './store/context'
 import './App.css'
+import { Link } from 'react-router-dom'
+
 
 function App() {
   const { name, setName } = useAuth();
   console.log(name);
   return (
     <>
-    <input type="text" value={name} onChange={e => setName(e.target.value)} />
-      
+    <Link to="/home">
+      <button>Home</button>
+    </Link>
+    <Link to="/Posts">
+            <button>posts</button>
+            </Link>
     </>
   )
 }
